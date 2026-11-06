@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [main]
+    branches: [main, test/6860-cvar-build]
     tags: ["v*"]
   pull_request:
     branches: [main]
@@ -15,6 +15,9 @@ jobs:
       - uses: actions/checkout@v6
         with:
           submodules: recursive
+
+      - name: Apply sourcesdk patch (test build only)
+        run: git -C sourcesdk apply ../ci-patches/sourcesdk-cvar.patch
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v5
