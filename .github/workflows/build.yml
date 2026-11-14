@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [main]
+    branches: [main, cl/v0.6.4-pawnfix]
     tags: ["v*"]
   pull_request:
     branches: [main]
