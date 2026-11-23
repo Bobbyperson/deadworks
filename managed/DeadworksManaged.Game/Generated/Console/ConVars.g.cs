@@ -1190,6 +1190,8 @@ public static class ConVars {
 	public static readonly GameConVar<bool> citadel_hideout_map_enabled = new("citadel_hideout_map_enabled");
 	/// <summary>Default <c>False</c>. Flags: developmentonly, gamedll.</summary>
 	public static readonly GameConVar<bool> citadel_hideout_npc_debug = new("citadel_hideout_npc_debug");
+	/// <summary>Default <c>0</c>. Flags: developmentonly, gamedll.</summary>
+	public static readonly GameConVar<string> citadel_hideout_owner_ranked_season_reward_override = new("citadel_hideout_owner_ranked_season_reward_override");
 	/// <summary>Default <c>3</c>. Flags: defensive, developmentonly, replicated, gamedll, clientdll.</summary>
 	public static readonly GameConVar<float> citadel_hideout_teleport_trigger_delay = new("citadel_hideout_teleport_trigger_delay");
 	/// <summary>Default <c>32</c>. Flags: release, replicated, gamedll, clientdll.</summary>
@@ -1326,8 +1328,10 @@ public static class ConVars {
 	public static readonly GameConVar<float> citadel_melee_heavymelee_push_force_vs_tiny = new("citadel_melee_heavymelee_push_force_vs_tiny");
 	/// <summary>Default <c>250</c>. Flags: developmentonly, gamedll.</summary>
 	public static readonly GameConVar<float> citadel_melee_heavymelee_toss_force_vs_tiny_min = new("citadel_melee_heavymelee_toss_force_vs_tiny_min");
-	/// <summary>Default <c>0.1</c>. Flags: defensive, developmentonly, gamedll.</summary>
+	/// <summary>Default <c>0.16</c>. Flags: defensive, developmentonly, gamedll.</summary>
 	public static readonly GameConVar<float> citadel_melee_hit_delay_max_time = new("citadel_melee_hit_delay_max_time");
+	/// <summary>Default <c>False</c>. Flags: defensive, developmentonly, gamedll.</summary>
+	public static readonly GameConVar<bool> citadel_melee_lagcomp_debug = new("citadel_melee_lagcomp_debug");
 	/// <summary>Default <c>0.55</c>. Flags: defensive, developmentonly, gamedll.</summary>
 	public static readonly GameConVar<float> citadel_melee_shake_amplitude = new("citadel_melee_shake_amplitude");
 	/// <summary>Default <c>0.1</c>. Flags: defensive, developmentonly, gamedll.</summary>
@@ -3308,7 +3312,7 @@ public static class ConVars {
 	public static readonly GameConVar<string> lservercfgfile = new("lservercfgfile");
 	/// <summary>Default <c>False</c>. Flags: defensive, developmentonly.</summary>
 	public static readonly GameConVar<bool> lua_assert_on_error = new("lua_assert_on_error");
-	/// <summary>Default <c>False</c>. Flags: dontrecord, flag_36, hidden, release.</summary>
+	/// <summary>Default <c>False</c>. Flags: dontrecord, hidden, release, vconsole_no_change_notify.</summary>
 	public static readonly GameConVar<bool> lua_is_currently_executing = new("lua_is_currently_executing");
 	/// <summary>Default <c>False</c>. Flags: defensive, developmentonly.</summary>
 	public static readonly GameConVar<bool> lua_shipping_assert_on_error = new("lua_shipping_assert_on_error");
